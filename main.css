@@ -1,40 +1,91 @@
-body {
-	font-family: 'Ubuntu', sans-serif;
-	color: white;
+/*==========================================
+Typography
+===========================================*/
+
+
+html {
 	background-color: black;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
 }
+
+svg text{
+	fill: white;
+}
+a {
+	color: white;
+}
+li {
+	list-style: none;
+}
+
+/*==========================================
+Header
+===========================================*/
+
+nav a {
+	color: #3500d3;
+	font-size: 1.5rem;
+	padding-left: 6rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+nav {
+	background-color: black;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: bold;
+	padding: 20px;
+}
+
+.header-nav li {
+	display: inline-block;
+	list-style: none;
+}
+
+header {
+	padding: 2rem;
+}
+
+
+/*==========================================
+Footer
+===========================================*/
+
 footer {
 	background-color: #3500d3;
 	color: white;
 	margin-top: 4rem;
-	padding: 1rem 2rem;
-	display: flex;
-	justify-content: space-between;
+	padding: 2rem;
 }
+
 footer a {
 	color: white;
 	text-decoration: none;
 }
-nav a {
-	color: #3500d3;
-	text-decoration: none;
-	padding-left: 3rem;
-	text-align: center;
-	font-size: 1.5rem;
-}
-a:hover {
-	color: white;
-	text-decoration: none;
-}
-nav {
-	font-family: 'Roboto Mono', monospace;
+
+.footer-nav {
 	background-color: black;
-	padding: 20px;
+	padding: 1rem;
+	text-align: center;
 }
-.header-nav {
-	display: flex;
-	justify-content: space-around; 
-	padding: 15px;
+.footer-nav ul {
+	list-style: none;
+	padding: 0;
 }
+
+.copyright {
+	margin-top: 10px;
+}
+
+
+
+
 
 
