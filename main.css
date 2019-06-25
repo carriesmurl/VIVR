@@ -72,8 +72,8 @@ svg text{
 
 a {
 	color: white;
+	text-decoration: none;
 }
-
 
 .text {
 	font-family: 'Roboto Mono', sans-serif;
@@ -226,9 +226,57 @@ Examples
 }
 
 
+/*==========================================
+Button Links
+===========================================*/
+
+.link-button {
+	background-color: var(--color-laser);
+	border-radius: 1.5rem;
+	color: white;
+	display: inline-block;
+	margin: 1rem;
+	padding: 1.5rem;
+	transition: all .5s;
+	font-size: 1.5rem;
+}
+
+.large-butt {
+	padding: 1.5rem;
+	font-size: 2rem;
+	
+}
+
+.small-butt {
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+a:visited {
+    color: var(--color-shadow);
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+a:active {
+   color: var(--color-deep-purple);
+}
+
+a:focus {
+	background-color: var(--color-deep-purple);
+    outline: none;
+}
 
 
+summary {
+    background-color: var(--color-dark);
+    padding: .5rem;
+}
 
-
-
+details div {
+    background-color: var(--color-indigo);
+    padding: 1rem;
+}
 
