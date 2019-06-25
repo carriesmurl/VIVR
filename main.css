@@ -75,17 +75,35 @@ a {
 	text-decoration: none;
 }
 
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: pink;
+}
+  
+a:active {
+   color: var(--color-deep-purple);
+}
+
+a:focus {
+    outline: none;
+}
+
 .text {
 	font-family: 'Roboto Mono', sans-serif;
 }
 
 figure.type {
 	font-family: 'Roboto Mono', sans-serif;
+	color: pink;
 }
 
 .eye-catcher {
 	font-size: var(--size-three);
 	font-family: 'Roboto Mono', sans-serif;
+	color: pink;
 }
 
 .caption-text {
@@ -100,8 +118,10 @@ ol ol {
 
 blockquote {
 	font-size: var(--size-five);
-	color: var(--color-shadow);
+	color: pink;
 }
+
+
 /*==========================================
 Header
 ===========================================*/
@@ -115,9 +135,17 @@ nav a {
 	text-transform: uppercase;
 }
 
+nav a:visited {
+	color: var(--color-laser);
+}
+
 nav a:hover {
 	color: white;
 	text-decoration: none;
+}
+
+nav a:active {
+	color: white;
 }
 
 nav {
@@ -136,6 +164,7 @@ nav ul {
 
 .header-nav li {
 	list-style: none;
+	color: var(--color-laser);
 }
 
 header {
@@ -218,11 +247,13 @@ Examples
 .second-font {
 	font-family: 'Roboto Mono', sans-serif;
 	font-size: var(--size-three);
+	color: pink;
 }
 
 .first-font {
 	font-family: 'Ubuntu';
 	font-size: var(--size-three);
+	color: pink;
 }
 
 
@@ -241,8 +272,38 @@ Button Links
 	font-size: 1.5rem;
 }
 
+
+.link-button:hover, .link-button:focus {
+	animation: jump 1s ease-out;
+}
+
+@keyframes jump {
+	0% {
+		transform: translateY(0);
+	}
+
+	30% {
+		transform: translateY(-2rem);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	65% {
+		transform: translateY(-1rem);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.link-button:active {
+	transform: scale(.95);
+}
+
 .large-butt {
-	padding: 1.5rem;
 	font-size: 2rem;
 	
 }
@@ -252,23 +313,9 @@ Button Links
 	font-size: 1rem;
 }
 
-a:visited {
-    color: var(--color-shadow);
-}
-
-a:hover {
-    color: blueviolet;
-}
-
-a:active {
-   color: var(--color-deep-purple);
-}
-
-a:focus {
-	background-color: var(--color-deep-purple);
-    outline: none;
-}
-
+/*==========================================
+details & summary
+===========================================*/
 
 summary {
     background-color: var(--color-dark);
@@ -276,7 +323,33 @@ summary {
 }
 
 details div {
-    background-color: var(--color-indigo);
+	border: 5px solid var(--color-laser);
     padding: 1rem;
 }
+
+summary::-webkit-details-marker {
+     background: url(images/zap.svg);
+     background-size: contain;
+     color: transparent;
+     transform: scale(1.5);
+}
+
+summary:focus {
+	outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
