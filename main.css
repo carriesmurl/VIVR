@@ -33,7 +33,7 @@ html {
 
 
 
-	background-color: var(--color-dark);
+	background-color: #292727;
 	color: white;
 	font-family: 'Ubuntu', sans-serif;
 	line-height: 1.4;
@@ -80,7 +80,7 @@ a:visited {
 }
 
 a:hover {
-    color: pink;
+    color: #ff31d6;
 }
   
 a:active {
@@ -97,13 +97,13 @@ a:focus {
 
 figure.type {
 	font-family: 'Roboto Mono', sans-serif;
-	color: pink;
+	color: #ff31d6;
 }
 
 .eye-catcher {
 	font-size: var(--size-three);
 	font-family: 'Roboto Mono', sans-serif;
-	color: pink;
+	color: #ff31d6;
 }
 
 .caption-text {
@@ -118,7 +118,7 @@ ol ol {
 
 blockquote {
 	font-size: var(--size-five);
-	color: pink;
+	color: #ff31d6;
 }
 
 
@@ -149,7 +149,6 @@ nav a:active {
 }
 
 nav {
-	background-color: var(--color-dark);
 	font-family: 'Roboto Mono', monospace;
 	font-weight: bold;
 	padding: 1.5px;
@@ -187,6 +186,7 @@ footer {
 	background-color: var(--color-laser);
 	padding: 2rem;
 	text-align: left;
+	margin-top: 3rem;
 }
 
 footer a {
@@ -247,13 +247,13 @@ Examples
 .second-font {
 	font-family: 'Roboto Mono', sans-serif;
 	font-size: var(--size-three);
-	color: pink;
+	color: #ff31d6;
 }
 
 .first-font {
 	font-family: 'Ubuntu';
 	font-size: var(--size-three);
-	color: pink;
+	color: #ff31d6;
 }
 
 
@@ -317,13 +317,19 @@ Button Links
 details & summary
 ===========================================*/
 
+details {
+	border-radius: 2rem;
+	overflow: hidden;
+	margin-bottom: 2rem;
+}
+
 summary {
     background-color: var(--color-dark);
     padding: .5rem;
 }
 
 details div {
-	border: 5px solid var(--color-laser);
+	background-color: var(--color-laser);
     padding: 1rem;
 }
 
@@ -338,10 +344,44 @@ summary:focus {
 	outline: none;
 }
 
+/*==========================================
+dialog
+===========================================*/
 
 
+dialog {
+	background-color: var(--color-laser);
+	padding: 2rem;
+	font-family: 'Roboto Mono', sans-serif;
+	border-radius: 2rem;
+	border: 2rem;
 
+}
 
+dialog[open]{
+	animation: slide-in 1s ease-out;
+}
+
+@keyframes slide-in {
+	0% {
+		opacity: 0;
+		transform: translateX(-40rem);
+	}
+
+	70% {
+		transform: translateX(3rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+}
+
+dialog::backdrop {
+	background-color: rgba(41,39,39,.9);
+}
 
 
 

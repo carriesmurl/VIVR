@@ -73,6 +73,15 @@
 
     </figure>
 
+    <h2>Modal Dialogue</h2>
+
+    <button id="open-modal" type="button">Open Modal</button>
+
+    <dialog id="modal-demo">
+      <h4>Blah Blah Blah</h4>
+      <p>hahahahahhahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah</p>
+    </dialog>
+
 	</main>
 <footer>
   <p>Carrington Smurl is a UX developer who attends Austin Community College. She has built this design system for the mock company, Beyond Vision, a virtual reality platform. </p>
@@ -92,5 +101,24 @@
     </div>
 
   </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+
+    const modal = document.querySelector('dialog');
+    const open = document.getElementById('open-modal');
+
+    open.addEventListener('click', () => {
+      modal.showModal();
+    });
+
+    modal.addEventListener('click', event => {
+      if (event.target === modal) {
+        modal.close('cancelled');
+      }
+    });
+
+  });
+</script>
+
 </body>
 </html>
