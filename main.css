@@ -8,6 +8,7 @@ html {
 	--color-laser: #4919d7;
 	--color-shadow: #d0d0d0;
 	--color-dark: #191919;
+	--color-nova: #ff31d6;
 }
 
 
@@ -108,7 +109,7 @@ figure.type {
 
 .caption-text {
 	font-family: 'Roboto Mono', sans-serif;
-	color: var(--color-laser);
+	color: white;
 	font-size: .9rem;
 }
 
@@ -318,13 +319,13 @@ details & summary
 ===========================================*/
 
 details {
-	border-radius: 2rem;
+	border-radius: 1rem;
 	overflow: hidden;
 	margin-bottom: 2rem;
 }
 
 summary {
-    background-color: var(--color-dark);
+    background-color: var(--color-deep-purple);
     padding: .5rem;
 }
 
@@ -380,16 +381,64 @@ dialog[open]{
 }
 
 dialog::backdrop {
-	background-color: rgba(41,39,39,.9);
+	background-color: rgba(41,39,39,.96);
 }
 
 
 
 
+/*==========================================
+Inputs
+===========================================*/
+label, input, textarea, select {
+	display: block;
+}
 
+form {
+	background-color: var(--color-laser);
+	border-radius: 1rem;
+	padding: 1rem;
+	margin-bottom: 3rem;
+}
 
+input {
+	border: 3px  solid var(--color-nova);
 
+}
 
+.error {
+	background-color: var(--color-nova);
+}
 
+.error-text {
+	color: var(--color-nova);
+}
 
+input:not([type=submit]), textarea, select {
+	border: 3px solid var(--color-nova);
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	padding: .5rem;
+	-webkit-appearance: none; 
+}
 
+input[disabled], textarea[disabled], select[disabled] {
+	border-style: dotted;
+}
+
+input:not([type=submit]), textarea {
+	min-width: 70%;
+}
+
+input:focus, select:focus, textarea:focus {
+	box-shadow: 2px 4px 10px fuchsia;
+	outline: none;
+}
+
+textarea {
+	min-height: 5rem;
+}
+
+input + .caption-text, textarea + .caption-text, select + .caption-text {
+	margin-top: -1rem;
+}
