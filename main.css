@@ -442,3 +442,34 @@ textarea {
 input + .caption-text, textarea + .caption-text, select + .caption-text {
 	margin-top: -1rem;
 }
+
+input[type="submit"], button {
+	background-color: var(--color-nova);
+	border-radius: 1.2rem;
+	color: white;
+	display: inline-block;
+	margin: 1rem;
+	padding: 1rem;
+	transition: all .5s;
+	font-size: 1rem;
+	border: none;
+
+}
+
+
+input[type="submit"]:hover, button:hover {
+	background-color: var(--color-laser);
+
+}
+
+input[type="submit"]:active, button:active {
+	transform: scale(.95);
+}
+
+input[type="submit"]:focus, button:focus {
+	outline: none;
+	color: white;
+}
+
+
+
