@@ -485,7 +485,7 @@ img {
 	border: 1.5rem;
 	border-style: solid;
 	border-radius: 1.5rem;
-	margin: 3rem;
+	margin-bottom: 1rem;
 }
 
 .card:hover {
@@ -496,10 +496,11 @@ img {
 	padding: 1.5rem;
 }
 
-@media (min-width: 830px) {
+@media (min-width: 850px) {
 	.card {
 		display: flex;
 		align-items: flex-start;
+
 	}
 	.card img {
 		max-width: 50%;
@@ -542,5 +543,50 @@ Notifications
 	color: white;
 	margin-right: 1rem;
 }
+
+
+
+
+/*==========================================
+card-GRID
+===========================================*/
+
+
+@media ( min-width: 680px ){
+
+	.card-grid {
+		display:  grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+	}
+
+}
+
+.card-person-grid {
+		display: flex;
+		justify-content: space-between;
+	}
+
+.card-person {
+	border: 1.5rem;
+	border-style: solid;
+	border-radius: 1.5rem;
+	margin: 1rem;
+
+}
+
+.card-person:hover {
+	border-color: var(--color-nova);
+}
+
+.card-person div {
+	padding: 1.5rem;
+}
+
+
+
+
+
+
 
 
